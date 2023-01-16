@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(108, 108, 222); /*Cor de fundo da página HTML*/
+    font: normal 15pt ARIAL;
+    
+}
+header {
+    color: white;
+    text-align: center;
+
+}
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(10, 10, 10);
+}
+select#flista {
+width: 150px;
+}
+footer {
+color: white;
+text-align: center;
+font-style: italic;}

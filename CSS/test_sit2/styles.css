@@ -1,0 +1,25 @@
+h1 {
+    color: blue;
+  }
+  p {
+    color: crimson;
+  }
+  p, li {
+    color: green;
+}
+.special {
+    color: orange;
+    font-weight: bold;
+  }
+  li em {
+    color: rebeccapurple;
+  }
+  h1 + p {
+    font-size: 200%;
+  }
+  body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+  }
+        

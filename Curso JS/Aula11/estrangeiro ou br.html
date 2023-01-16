@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>Países</h1>
+    Qual país você vive: <input type="string" name="txtpa" id="txtpa"> 
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+
+    <script>
+
+           function calcular() {
+            var txtp = window.document.getElementById('txtpa')//Ligação do Js com a caixa de texto acima
+            var res  = window.document.querySelector('div#res')//(id = #)(class = .)Faz a seleção pelo seletor do Js
+            var pa = String(txtpa.value)//Vai pegar oque foi digitado na caixa de texto
+        
+           res.innerHTML = `<p>Vivendo em ${pa}</p>`//Irá escrever dentro da div(res)
+             if (pa == 'Brasil') {                 //Se o país for igua a Brasil, será brasileira 
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            } 
+            else {                                   //Se for diferente de Brasil, será estrangeira
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+           }
+           
+        
+    </script>
+</body>
+</html>
