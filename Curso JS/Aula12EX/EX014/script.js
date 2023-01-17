@@ -7,7 +7,7 @@ function carregar () {
     if (hora >= 0 && hora < 12 ) {
     //Bom dia!
     img.src = 'fotomanha.png'
-    document.body.style.background = '#b4bc26'; //Altera a cor de fundo quando for a hora
+    document.body.style.background = '#b4bc26'; //Altera a cor de fundo quando for a hora do seu dispositivo
    } else if ( hora >=12 && hora <= 18) {
     //Boa Tarde!
     img.src = 'fototarde.png'
