@@ -16,7 +16,6 @@ function inLista(n, l) {
     } else {
         return false
     }
-
 }
 
 function adicionar() {
@@ -26,7 +25,7 @@ function adicionar() {
         item.text = `Valor ${num.value} adicionado.`
         lista.appendChild(item)
         res.innerHTML = ''
-
+        
     }else  {
         window.alert('Valor inválido ou já encontrado na lista.')
     }
