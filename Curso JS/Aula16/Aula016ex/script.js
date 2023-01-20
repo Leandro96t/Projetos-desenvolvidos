@@ -17,7 +17,6 @@ function inLista(n, l) {
         return false
     }
 }
-
 function adicionar() {
     if (isNumero(num.value) && !inLista(num.value, valores)) {
         valores.push(Number(num.value))
