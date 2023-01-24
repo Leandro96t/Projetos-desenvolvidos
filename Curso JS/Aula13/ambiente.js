@@ -11,7 +11,6 @@ while (c <= 6) {
     c++ //Mesma coisa de c = c + 1
 }*/
 
-
 /*console.log('Olá tudo bem?')
 console.log('Olá tudo bem?')
 console.log('Olá tudo bem?')*/
