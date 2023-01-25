@@ -168,3 +168,5 @@ function outputResult(result, text, actions) {
   currentCalculationOutput.textContent = text;
   calcActionsOutput.textContent = actions;
 }*/
+/*
+,  */
