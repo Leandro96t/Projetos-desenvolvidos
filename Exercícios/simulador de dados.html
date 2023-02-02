@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <main id="tela-principal">
     <h1>Jogo do dado</h1>
+    <main id="tela-principal">
     <h2>Jogador 1</h2>
 
-    <input type="button" value="Somar" onclick="somar1()">
+    <input type="button" value="Somar" id="calcular" onclick="somar1()">
     <p></p>
-    <div id="res">
-
-    </div>
+    <div id="res"></div>
     
     <selection class="conteúdo">
         <p id="sorteado" class="centro">?</p>
@@ -24,8 +22,9 @@
             <img src="dado.png" alt="dado" id="imagemdado"/>
         </figure>
     </selection>
-    <p class="centro"><button id="botaosortear"></button></p>
+    <p class="centro"><button id="botaosortear">Sortear</button></p>
    </main>
+
     <script>
         let numerosorteado = document.querySelector('#dado')
         let imagemdado = document.querySelector('#imagemdado')
@@ -66,7 +65,7 @@
         }
     </script>
 
-<main id="tela-principal">
+<main id="tela-principal2">
    
     <h2>Jogador 2</h2>
     <selection class="conteúdo2">
@@ -75,7 +74,7 @@
             <img src="dado.png" alt="dado" id="imagemdado2"/>
         </figure>
     </selection>
-    <p class="centro2"><button id="botaosortear2"></button></p>
+    <p class="centro2"><button id="botaosortear2">Sortear</button></p>
    </main>
     <script>
         let numerosorteado2 = document.querySelector('#dado')
@@ -126,13 +125,13 @@
                 return 
             } else{
                 res.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
+                
             }
-            
-            
-
         }
 
     </script>
-    
+    <footer>
+        <p>&copy; LeandroSantos</p>
+        </footer>
 </body>
 </html>
