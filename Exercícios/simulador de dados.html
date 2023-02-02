@@ -119,7 +119,14 @@
             var res1 = numerosorteado
             var res2 = numerosorteado2
             var s = numerosorteado + numerosorteado2
-            res.innerHTML = `A soma entre  ${res1} e ${res2} é igual a <strong>${s}</strong>`
+           
+
+            if(numerosorteado, numerosorteado2 <= 0){
+                window.alert('[ERRO] Verifique se os dois participantes giraram o dado!')
+                return 
+            } else{
+                res.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
+            }
             
             
 
