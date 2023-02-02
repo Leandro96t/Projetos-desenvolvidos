@@ -11,8 +11,12 @@
     <main id="tela-principal">
     <h1>Jogo do dado</h1>
     <h2>Jogador 1</h2>
-    <div id="result">Resultado</div>
-    <input type="button" value="Somar" onclick="somar1()"/>
+
+    <input type="button" value="Somar" onclick="somar1()">
+    <p></p>
+    <div id="res">
+
+    </div>
     
     <selection class="conteúdo">
         <p id="sorteado" class="centro">?</p>
@@ -27,6 +31,7 @@
         let imagemdado = document.querySelector('#imagemdado')
         let botaosortear = document.querySelector('#botaosortear')
         let sorteado = document.querySelector('#sorteado')
+        let res = document.querySelector('div#res')
         
         botaosortear.addEventListener('click', function(){
             //adicionar animação
@@ -114,7 +119,8 @@
             var res1 = numerosorteado
             var res2 = numerosorteado2
             var s = numerosorteado + numerosorteado2
-            console.log(`A soma entre  ${res1} e ${res2} é igual a <strong>${s}</strong>`)
+            res.innerHTML = `A soma entre  ${res1} e ${res2} é igual a <strong>${s}</strong>`
+            
             
 
         }
