@@ -25,10 +25,7 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
 }
-h3 {
-    margin: 50px;
 
-}
 #imagemdado, #imagemdado2 {
     width: 200px;
     
@@ -39,12 +36,13 @@ h3 {
     text-align: center;
 }
 #calcular {
-    border-radius: 30px;  
+    border-radius: 3000px;  
     padding: 10px;
     width: 300px;
     background-color: rgb(26, 170, 175); 
     color: #fff;
     cursor: pointer;
+    
 }
 
 #botaosortear, #botaosortear2 {

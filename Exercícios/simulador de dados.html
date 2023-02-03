@@ -11,11 +11,9 @@
     <h1>Jogo do dado</h1>
     <main id="tela-principal">
     <h2>Jogador 1</h2>
-
     <input type="button" value="Somar vealores" id="calcular" onclick="somar1()">
     <p></p>
     <div id="res"></div>
-    
     <selection class="conteúdo">
         <p id="sorteado" class="centro">?</p>
         <figure>
@@ -24,7 +22,6 @@
     </selection>
     <p class="centro"><button id="botaosortear">Sortear</button></p>
    </main>
-
     <script>
         let numerosorteado = document.querySelector('#dado')
         let imagemdado = document.querySelector('#imagemdado')
@@ -67,9 +64,10 @@
 
 <main id="tela-principal2">
    
-    <h3>Jogador 2</h3>
-    <p> </p>
+    <h2>Jogador 2</h2>
+    <input type="button" value="Somar vealores" id="calcular" onclick="somar1()">
     <p></p>
+    <div id="res0"></div>
     <selection class="conteúdo2">
         <p id="sorteado2" class="centro2">?</p>
         <figure>
@@ -127,6 +125,8 @@
                 return 
             } else{
                 res.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
+                res0.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
+
                 
             }
         }
