@@ -5,19 +5,19 @@ body {
 }
 
 #tela-principal {
+    display: inline-block;
     background: white;
     border-radius: 100px;
     padding: 50px;
     width: 300px;
-    margin: auto;
     box-shadow: 3px 3px 10px rgb(10, 10, 10);
 }
     #tela-principal2 {
+        display: inline-block;
         background: white;
         border-radius: 100px;
         padding: 50px;
         width: 300px;
-        margin: auto;
         box-shadow: 3px 3px 10px rgb(10, 10, 10); 
 }
 
@@ -25,12 +25,16 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
 }
+h3 {
+    margin: 50px;
+
+}
 #imagemdado, #imagemdado2 {
     width: 200px;
     
 }
 
-.centro2, .centro, h2 {
+.centro2, .centro {
     margin-top: 0.625rem;
     text-align: center;
 }
