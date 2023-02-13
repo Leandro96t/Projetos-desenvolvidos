@@ -10,20 +10,26 @@
 <body>
     <h1>Jogo do dado</h1>
     <main id="tela-principal">
-    <h2>Dado 1</h2>
+    <h2>Multiplas jogadas</h2>
     <input type="button" value="Somar vealores" id="calcular" onclick="somar1()">
     <p></p>
     <div id="res"></div>
     <selection class="conteúdo">
         <p id="sorteado" class="centro">?</p>
+        <p id="sorteado2" class="centro2">?</p>
         <figure>
+            <br>
             <img src="dado.png" alt="dado" id="imagemdado"/>
+            <br>
+            <img src="dado.png" alt="dado2" id="imagemdado2"/>
         </figure>
     </selection>
     <p class="centro"><button id="botaosortear">Sortear</button></p>
    </main>
     <script>
         let numerosorteado = document.querySelector('#dado')
+        let numerosorteado2 = document.querySelector('#dado2')
+        let imagemdado2 = document.querySelector('#imagemdado2')
         let imagemdado = document.querySelector('#imagemdado')
         let botaosortear = document.querySelector('#botaosortear')
         let sorteado = document.querySelector('#sorteado')
@@ -32,79 +38,34 @@
         botaosortear.addEventListener('click', function(){
             //adicionar animação
             imagemdado.classList.add('animar')
+            imagemdado2.classList.add('animar')
             sorteado.classList.add('aparecer')
+            sorteado2.classList.add('aparecer')
             //ocultar botão sortear
             botaosortear.style.display = 'none'
             //usando o setTimeout para executar as acoes apos 1.75 segundos
             setTimeout(function() {
             //armazenar numero sorteado na variável
             numerosorteado = getRandomInt(1.6)
+            numerosorteado2 = getRandomInt(1.6)
             //escrever numero sortealdo no console 
             console.log(numerosorteado)
+            console.log(numerosorteado2)
+
             //  definir atributo src com base no numero sorteado
-            imagemdado.setAttribute('src' , '/Exercícios/imagens/' + numerosorteado + '.png')       
+            imagemdado.setAttribute('src' , '/Exercícios/Multiplas  "jogadas"/imagens/' + numerosorteado + '.png')
+            imagemdado2.setAttribute('src' , '/Exercícios/Multiplas  "jogadas"/imagens/' + numerosorteado2 + '.png')       
             //escrever um parágrafo numero sorteado 
             sorteado.textContent = numerosorteado
+            sorteado2.textContent = numerosorteado2
+
             //exibir botao sortear
             botaosortear.style.display = 'inline-block'
             //retirar animação
             imagemdado.classList.remove('animar')
-            sorteado.classList.remove('aparecer') 
-            },1750)
-        })
-
-        // FUNCAO que gera numero randomico inteiro
-        //incluindo o minimoe e maximo
-        function getRandomInt(min, max){
-            //min = Math.ceil(min) //arredonda para cima ceil = teto
-            //max = Math.floor(max)//aredonda para baixo floor = piso
-            return Math.floor(Math.random() * 6 + 1)//(max - min + 1)) + min
-        }
-    </script>
-
-<main id="tela-principal2">
-   
-    <h2>Dado 2</h2>
-    <input type="button" value="Somar vealores" id="calcular" onclick="somar1()">
-    <p></p>
-    <div id="res0"></div>
-    <selection class="conteúdo2">
-        <p id="sorteado2" class="centro2">?</p>
-        <figure>
-            <img src="dado.png" alt="dado" id="imagemdado2"/>
-        </figure>
-    </selection>
-    <p class="centro2"><button id="botaosortear2">Sortear</button></p>
-   </main>
-
-   
-    <script>
-        let numerosorteado2 = document.querySelector('#dado')
-        let imagemdado2 = document.querySelector('#imagemdado2')
-        let botaosortear2 = document.querySelector('#botaosortear2')
-        let sorteado2 = document.querySelector('#sorteado2')
-        
-        botaosortear2.addEventListener('click', function(){
-            //adicionar animação
-            imagemdado2.classList.add('animar')
-            sorteado2.classList.add('aparecer')
-            //ocultar botão sortear
-            botaosortear2.style.display = 'none'
-            //usando o setTimeout para executar as acoes apos 1.75 segundos
-            setTimeout(function() {
-            //armazenar numero sorteado na variável
-            numerosorteado2 = getRandomInt(1.6)
-            //escrever numero sortealdo no console 
-            console.log(numerosorteado2)
-            //  definir atributo src com base no numero sorteado
-            imagemdado2.setAttribute('src' , '/Exercícios/imagens/' + numerosorteado2 + '.png')       
-            //escrever um parágrafo numero sorteado 
-            sorteado2.textContent = numerosorteado2
-            //exibir botao sortear
-            botaosortear2.style.display = 'inline-block'
-            //retirar animação
             imagemdado2.classList.remove('animar')
-            sorteado2.classList.remove('aparecer') 
+
+            sorteado.classList.remove('aparecer') 
             },1750)
         })
 
@@ -127,15 +88,13 @@
                 return 
             } else{
                 res.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
-                res0.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${s}</strong>`
-
                 
             }
         }
 
     </script>
-    <footer>
+ <footer>
         <p>&copy; LeandroSantos</p>
         </footer>
 </body>
-</html>
+</html> 

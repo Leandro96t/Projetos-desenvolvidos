@@ -15,7 +15,7 @@ body {
     #tela-principal2 {
         display: inline-block;
         background: white;
-        border-radius: 100px;
+        border-radius: 1000px;
         padding: 50px;
         width: 300px;
         box-shadow: 3px 3px 10px rgb(10, 10, 10); 
@@ -26,8 +26,13 @@ h1 {
     font-size: 2.5rem;
 }
  
-#imagemdado, #imagemdado2 {
-    width: 200px;
+#imagemdado {
+    width: 150px;
+    display: inline-block;
+}
+#imagemdado2 {
+    width: 150px;
+    display: inline-block;
     
 }
 
