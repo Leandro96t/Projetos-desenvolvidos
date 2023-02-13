@@ -1,0 +1,103 @@
+body {
+    background-color: rgb(108, 108, 222); /*Cor de fundo da página HTML*/
+    font: normal 15pt ARIAL;  
+    text-align: center;
+}
+
+#tela-principal {
+    display: inline-block;
+    background: white;
+    border-radius: 100px;
+    padding: 50px;
+    width: 300px;
+    box-shadow: 3px 3px 10px rgb(10, 10, 10);
+}
+    #tela-principal2 {
+        display: inline-block;
+        background: white;
+        border-radius: 100px;
+        padding: 50px;
+        width: 300px;
+        box-shadow: 3px 3px 10px rgb(10, 10, 10); 
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+ 
+#imagemdado, #imagemdado2 {
+    width: 200px;
+    
+}
+
+.centro2, .centro {
+    margin-top: 0.625rem;
+    text-align: center;
+}
+#calcular {
+    border-radius: 3000px;  
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(26, 170, 175); 
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+#botaosortear, #botaosortear2 {
+    padding: 10px;
+    width: 100px;
+    border: 20;
+    border-radius: 5px;
+    background-color:#673ab7;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgb(128, 111, 145);
+    
+}
+
+#sorteado, #sorteado2 {
+    background: #311b92;
+    width: 300px;
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+}
+@keyframes mover {
+    0% {
+        transform: translatey(0px);
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(50%);
+    }
+    100% {
+        transform: translateY(-15px);
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+}
+@keyframes aparecer {
+    to {
+        opacity: 0;
+    }
+    from {
+        opacity: 1;
+    }
+}
+.animar {
+    animation: mover 0.5s infinite alternate;
+}
+
+
+
+
+
+footer {
+color: white;
+text-align: center;
+font-style: italic;
+}
