@@ -72,17 +72,17 @@ h1 {
 }
 @keyframes mover {
     0% {
-        transform: translatey(0px);
-        transform: rotate(45deg);
-        opacity: 0;
+        transform: translatey(0px);/*Mover no eixo Y vertical*/
+        transform: rotate(45deg);/*rotacionar 90graus */
+        opacity: 0; /*opacidade 0 = 100% trasparente*/
     }
     50% {
-        transform: scale(50%);
+        transform: scale(50%); /*mudar tamanho para 50%*/
     }
     100% {
-        transform: translateY(-15px);
-        transform: rotate(-45deg);
-        opacity: 1;
+        transform: translateY(-15px);/*Mover no eixo Y vertical*/
+        transform: rotate(-45deg);/*rotacionar -90 graus */
+        opacity: 1;/*opacidade 1 = 0% trasparente*/
     }
 }
 @keyframes aparecer {
