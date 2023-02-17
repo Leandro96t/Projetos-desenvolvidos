@@ -16,7 +16,11 @@
     <div id="res"></div>
     <selection class="conteúdo">
         <p id="sorteado" class="centro">?</p>
+        <p id="SOR" class="cen1"></p>
+
         <p id="sorteado2" class="centro2">?</p>
+        <p id="SOR1" class="cen2"></p>
+
         <figure>
             <br>
             <img src="dado.png" alt="dado" id="imagemdado"/>
@@ -24,7 +28,7 @@
             <img src="dado.png" alt="dado2" id="imagemdado2"/>
         </figure>
     </selection>
-    <p class="centro"><button id="botaosortear">Sortear</button></p>
+    <p class="centro3"><button id="botaosortear">Sortear</button></p>
    </main>
 
     <script>
@@ -35,6 +39,9 @@
         let botaosortear = document.querySelector('#botaosortear')
         let sorteado = document.querySelector('#sorteado')
         let res = document.querySelector('div#res')
+       
+        
+        
         
         botaosortear.addEventListener('click', function(){
             //adicionar animação
@@ -44,11 +51,15 @@
             sorteado2.classList.add('aparecer')
             //ocultar botão sortear
             botaosortear.style.display = 'none'
+            
             //usando o setTimeout para executar as acoes apos 1.75 segundos
             setTimeout(function() {
+                if(getRandomInt >10){
+                    
+                }
             //armazenar numero sorteado na variável
-            numerosorteado = getRandomInt(1.6)
-            numerosorteado2 = getRandomInt(1.6)
+            numerosorteado = getRandomInt(1,6)
+            numerosorteado2 = getRandomInt(1,6)
             //escrever numero sortealdo no console 
             console.log(numerosorteado)
             console.log(numerosorteado2)
@@ -60,8 +71,13 @@
             sorteado.textContent = numerosorteado
             sorteado2.textContent = numerosorteado2
 
+            SOR.textContent = [numerosorteado]
+            SOR1.textContent = (numerosorteado2 )
+
+            
+
             //exibir botao sortear
-            botaosortear.style.display = 'inline-block'
+            botaosortear.style.display = 'inline-block' 
             //retirar animação
             imagemdado.classList.remove('animar')
             imagemdado2.classList.remove('animar')
@@ -72,37 +88,29 @@
 
         // FUNCAO que gera numero randomico inteiro
         //incluindo o minimoe e maximo
-        function getRandomInt(min, max){
+        function getRandomInt(){
             //min = Math.ceil(min) //arredonda para cima ceil = teto
             //max = Math.floor(max)//aredonda para baixo floor = piso
             return Math.floor(Math.random() * 6 + 1)//(max - min + 1)) + min
+          
+           
         }
            
-
-        function somar1(limite) {
+        function somar1() {
             var res1 = numerosorteado
             var res2 = numerosorteado2
             var soma = numerosorteado + numerosorteado2
-            var Par = "2,4,6,8,10,12"
-            var impar = "2,4,6,8,10,12"
-
+           
+        
             if(numerosorteado, numerosorteado2 <= 0 ){
                 window.alert('[ERRO] Verifique se os dados foram lançados!')
             } else{
                 res.innerHTML = `A soma entre  ${res1} + ${res2} é igual a <strong>${soma}</strong>`
-            }
+             }}
 
-
-            /*function adicionar() {
-            if (isNumero(num.value) && !inLista(num.value, valores)) {
-            valores.push(Number(num.value))
-            var item = document.createElement('option')
-            item.text = `Valor ${num.value} adicionado.`
-            lista.appendChild(item)
-            res.innerHTML = ''
-            }*/
-        }
-
+           /*if (numerosorteado % 2 == 0) {
+                sorteado.textContent = `O numero ${numerosorteado} é Par` 
+            }}*/ 
        
 
     </script>

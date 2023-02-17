@@ -27,16 +27,16 @@ h1 {
 }
  
 #imagemdado {
-    width: 150px;
+    width: 100px;
     display: inline-block;
 }
 #imagemdado2 {
-    width: 150px;
+    width: 100px;
     display: inline-block;
     
 }
 
-.centro2, .centro {
+.centro2, .centro{
     margin-top: 0.625rem;
     text-align: center;
 }
@@ -64,6 +64,17 @@ h1 {
 
 #sorteado, #sorteado2 {
     background: #311b92;
+    width: 30px;
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    display: table-cell;
+}
+
+
+#SOR, #SOR1 {
+    background: #8378b3;
     width: 300px;
     border-radius: 30px;
     color: #fff;
