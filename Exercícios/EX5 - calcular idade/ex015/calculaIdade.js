@@ -1,48 +1,35 @@
-class datanascimento{
+class calculoIdade {
 
-    datanascimento (dataNascimento, dataAtual) {
-    var dataNasc = dataNascimento.split("/");
+    calculaIdade(dataNascimento, dataAtual){
+        var dataNasc = dataNascimento.split("/");
+        var ano = dataNasc[2];
+        var mes = dataNasc[1];
+        var dia = dataNasc[0];
 
-                var fdia = window.document.getElementById('day').value
-                var fmes = window.document.getElementById('month').value
-                var fano = window.document.getElementById('year').value
+        var dataAtu = dataAtual.split("/");
+        var anoAtual = dataAtu[2];
+        var mesAtual = dataAtu[1];
+        var diaAtual = dataAtu[0];
 
-
-
-    var ano = fano;
-    var mes = fmes;
-    var dia = fdia;
-
-    var data = new Date()
-    var anoAtual = data.getFullYear()
-    var mesAtual = data.getMonth() + 1;
-    var diaAtual = data.getDate()
-
-   console.log(diaAtual)
-
-    /*if (anoAtual.length == 0 || Number(anoAtual)> ano){
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
-
-}*/
-
-
-    
-        if  (anoAtual >= ano) {
-            if ( mesAtual >= mes )     {
-                if (diaAtual >= dia)  {
+        if  (anoAtual >= ano) 
+        {
+            if ( mesAtual >= mes ) 
+            {
+                if (diaAtual >= dia) 
+                {
                     var idade = anoAtual - ano;
                     var idadeMes = mesAtual - mes;
                     var idadeDia = diaAtual - dia;
 
                     return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';
                 }        
-                else      {  //Ano >= e Mes >= Dia <
-          
-                    if ( mesAtual > mes )  {
-                  
+                else  //Ano >= e Mes >= Dia <
+                {
+                    if ( mesAtual > mes )
+                    {
                         var idade = anoAtual - ano;
                         var idadeMes = mesAtual - mes;
-   //                   idadeMes--;
+                        idadeMes--;
                         var idadeDia = diaAtual - dia; 
                         //idadeDia += 30; 
                         if (mesAtual==1){
@@ -51,7 +38,7 @@ class datanascimento{
                         } 
                         else{
     //                            console.log('enviando mes: '+(mesAtual-1)+' ano:'+anoAtual);
-                        idadeDia += this.calculaDiasMes(mesAtual-1,anoAtual);
+                            idadeDia += this.calculaDiasMes(mesAtual-1,anoAtual);
                         }
                         return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';                      
                     }
@@ -77,7 +64,7 @@ class datanascimento{
                         }
                         else //Ano < e Mes < Dia <
                         {
-                            return 'Não nasceu ainda!';
+                            return 'Não nasceu ainda??!!';
                         }
                     }
                 
@@ -130,78 +117,42 @@ class datanascimento{
         {
             return 'Não nasceu ainda??!!';
         }
-    }
     
-         calculaDiasMes(mesRecente,anoRecente){
-            //       console.log('Recebido mes: '+mesRecente);
-            //        console.log('Recebido ano: '+anoRecente);
-            //        console.log('Valor resto da divisao: '+(anoRecente % 4));
-                if (mesRecente==2){
-                    if((anoRecente % 4)==0){
-            //                console.log('retornei 29 dias');
-                        return 29;
-                    }
-                    else
-                    {
-            //               console.log('retornei 28 dias');                
-                        return 28;
-                    }
-                }
-                if ( (mesRecente=1) || (mesRecente=3) || (mesRecente=5) || (mesRecente=7) || (mesRecente=8) || (mesRecente=10) || (mesRecente=12) )
-                {
-            //            console.log('retornei 31 dias');
-                    return 31;
-                }
-                if ( (mesRecente=4) || (mesRecente=6) || (mesRecente=9) || (mesRecente=11) )
-                {
-            //            console.log('retornei 30 dias');
-                    return 30;
-                }        
+    }
+
+    calculaDiasMes(mesRecente,anoRecente){
+    //       console.log('Recebido mes: '+mesRecente);
+    //        console.log('Recebido ano: '+anoRecente);
+    //        console.log('Valor resto da divisao: '+(anoRecente % 4));
+        if (mesRecente==2){
+            if((anoRecente % 4)==0){
+    //                console.log('retornei 29 dias');
+                return 29;
+            }
+            else
+            {
+    //               console.log('retornei 28 dias');                
+                return 28;
             }
         }
-    
-       function DiasnoMes(mes,dia){
-            //       console.log('Recebido mes: '+mesRecente);
-            //        console.log('Recebido ano: '+anoRecente);
-            //        console.log('Valor resto da divisao: '+(anoRecente % 4));
-                if (mes==2){
-                    if((ano % 4)==0){
-            //                console.log('retornei 29 dias');
-                        return 29;
-                    }
-                    else
-                    {
-            //               console.log('retornei 28 dias');                
-                        return 28;
-                    }
-                }
-                if ( (mes=1) || (mes=3) || (mes=5) || (mes=7) || (mes=8) || (mes=10) || (mes=12) )
-                {
-            //            console.log('retornei 31 dias');
-                    return 31;
-                }
-                if ( (mes=4) || (mes=6) || (mes=9) || (mes=11) )
-                {
-            //            console.log('retornei 30 dias');
-                    return 30;
-                }        
-            }
+        if ( (mesRecente=1) || (mesRecente=3) || (mesRecente=5) || (mesRecente=7) || (mesRecente=8) || (mesRecente=10) || (mesRecente=12) )
+        {
+    //            console.log('retornei 31 dias');
+            return 31;
+        }
+        if ( (mesRecente=4) || (mesRecente=6) || (mesRecente=9) || (mesRecente=11) )
+        {
+    //            console.log('retornei 30 dias');
+            return 30;
+        }        
+    }
+}
 
-            function verificar(){
+const date2 = new Date();
+var hoje = new Intl.DateTimeFormat('pt-BR').format(date2);
+var objCalculoIdade = new calculoIdade;
+var textoIdade = objCalculoIdade.calculaIdade('31/02/2022',hoje);
 
-            const date2 = new Date();
-
-            var hoje = new Intl.DateTimeFormat('pt-BR').format(date2);
-
-            var objCalculoIdade = new datanascimento;
-            
-            var textoIdade = objCalculoIdade.datanascimento(hoje)
-        
-            console.log(textoIdade                  )
-            res.innerHTML = ('A sua idade é '+textoIdade)
-           
-            }
-            
-            
-        
-    
+console.log(textoIdade);
+document.write('Idade calculada: '+textoIdade);
+//document.getElementById("conteudo").innerHTML = textoIdade;

@@ -17,6 +17,7 @@
                 <div class="form-inline">
                     <div class="form-group">
                         <select id="day" class="form-control">
+                            <option value="">Dia</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -49,9 +50,11 @@
                             <option value="30">30</option>
                             <option value="31">31</option>
                         </select>
+                       
                     </div>
                     <div class="form-group">
-                        <select id="month" class="form-control">
+                        <select id="month" class="form-control" placeholder="Mes">
+                            <option value="">Mes</option>
                             <option value="01">Janeiro</option>
                             <option value="02">Fevereiro</option>
                             <option value="03">Março</option>
@@ -68,7 +71,7 @@
                     </div>
                     <div class="form-group">
                         <input type="text" name="txtano" id="year" size="4" placeholder="Ano">     
-        <p>
+                        <br>
             <input type="button" value="Verificar" onclick="verificar()">
         </p>
         </div>
