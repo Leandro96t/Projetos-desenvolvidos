@@ -17,15 +17,7 @@ class datanascimento{
     var anoAtual = data.getFullYear()
     var mesAtual = data.getMonth() + 1;
     var diaAtual = data.getDate()
-
-   console.log(diaAtual)
-
-    /*if (anoAtual.length == 0 || Number(anoAtual)> ano){
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
-
-}*/
-
-
+    
     
         if  (anoAtual >= ano) {
             if ( mesAtual >= mes )     {
@@ -34,7 +26,7 @@ class datanascimento{
                     var idadeMes = mesAtual - mes;
                     var idadeDia = diaAtual - dia;
 
-                    return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';
+                    return ('Sua idade é: '+ idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.');
                 }        
                 else      {  //Ano >= e Mes >= Dia <
           
@@ -53,7 +45,7 @@ class datanascimento{
     //                            console.log('enviando mes: '+(mesAtual-1)+' ano:'+anoAtual);
                         idadeDia += this.calculaDiasMes(mesAtual-1,anoAtual);
                         }
-                        return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';                      
+                        return ('Sua idade é: '+ idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.');                      
                     }
                     else //Ano >= e Mes < Dia <
                     {
@@ -72,7 +64,7 @@ class datanascimento{
     //                                console.log('enviando mes: '+(mesAtual-1)+' ano:'+anoAtual);
                                 idadeDia += this.calculaDiasMes(mesAtual-1,anoAtual);
                             }
-                            return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';                           
+                            return ('Sua idade é: '+ idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.');                           
                             
                         }
                         else //Ano < e Mes < Dia <
@@ -96,7 +88,7 @@ class datanascimento{
                         idadeMes +=12;
                         var idadeDia = diaAtual - dia;
 
-                        return idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.';                     
+                        return ('Sua idade é: '+ idade+' Anos, '+idadeMes+' Meses e '+idadeDia+ ' Dias.');                     
                     } 
                     else //Ano > e Mes < e Dia <
                     {
@@ -121,14 +113,14 @@ class datanascimento{
                 } //Ano < e Mes <
                 else
                 {
-                    return 'Não nasceu ainda??!!';
+                    return 'Não nasceu ainda!';
                 }                
             }
 
         }
         else
         {
-            return 'Não nasceu ainda??!!';
+            return 'Não nasceu ainda!';
         }
     }
     
@@ -164,7 +156,8 @@ class datanascimento{
             //       console.log('Recebido mes: '+mesRecente);
             //        console.log('Recebido ano: '+anoRecente);
             //        console.log('Valor resto da divisao: '+(anoRecente % 4));
-                if (mes==2){
+                
+            if (mes==2){
                     if((ano % 4)==0){
             //                console.log('retornei 29 dias');
                         return 29;
@@ -189,19 +182,37 @@ class datanascimento{
 
             function verificar(){
 
+                var fdia = window.document.getElementById('day').value
+                var fmes = window.document.getElementById('month').value
+                var fano = window.document.getElementById('year').value
+                let res = document.querySelector('div#res')
+
+                var ano = fano;
+                var mes = fmes;
+                var dia = fdia;
+
             const date2 = new Date();
 
             var hoje = new Intl.DateTimeFormat('pt-BR').format(date2);
-
             var objCalculoIdade = new datanascimento;
-            
             var textoIdade = objCalculoIdade.datanascimento(hoje)
         
-            console.log(textoIdade                  )
-            res.innerHTML = ('A sua idade é '+textoIdade)
-           
+            if ((fdia === " ") || (fmes === " ") || fano <= 0){
+                window.alert('[ERRO] Insira os dados e tente novamente!')
+
             }
-            
-            
-        
-    
+
+            /*if ((fdia === " ") & (fmes !== " ") & fano >= 1){
+                window.alert('[ERRO] Insira os dados DIA tente novamente!')
+
+               }     if ((fdia === " ") || (fmes !== " ") || fano >= 1 ){ 
+                         window.alert('[ERRO] Insira os dados MES tente novamente!')
+                    }
+                           if (fano <= 0 & fmes > 1 & fdia>1){
+                             window.alert('[ERRO] Insira os dados ANO tente novamente!')
+                
+
+                          } */
+            else{res.innerHTML = (textoIdade)
+            }
+        };
